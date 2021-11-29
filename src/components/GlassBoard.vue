@@ -19,8 +19,9 @@ export default {
         height: 80vh;
         background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255,255,255,0.3));
         width: 65vw;
-        border-radius: 2rem;
+        border-radius: .5rem;
         z-index: 2;
         backdrop-filter: blur(2rem);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
 </style>

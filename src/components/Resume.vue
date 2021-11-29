@@ -1,9 +1,14 @@
 <template>
-            <iframe class="embedded-resume" src="https://docs.google.com/document/d/e/2PACX-1vRrdydnGxRB28zI56czT9amjK3m5H5Qs6L7tPXSOVKLqhl6GlKeAVRtWQtGpVfwFTQRniMfCEwOeYtn/pub?embedded=true"></iframe>
+            <iframe id="resume" class="embedded-resume" src="https://docs.google.com/document/d/e/2PACX-1vRrdydnGxRB28zI56czT9amjK3m5H5Qs6L7tPXSOVKLqhl6GlKeAVRtWQtGpVfwFTQRniMfCEwOeYtn/pub?embedded=true"></iframe>
 </template>
 <script>
 export default {
-    name: 'Resume'
+    name: 'Resume',
+    mounted() {
+    //     let myiFrame = document.getElementById("resume");
+    //     let doc = myiFrame.contentDocument;
+    //    console.log(doc.body.innerHTML)
+    }
 }
 </script>
 
@@ -14,5 +19,9 @@ export default {
      padding: 1rem;
      border: none;
      border-radius: 2rem;
+ }
+
+ .embedded-resume div {
+     margin: auto;
  }
 </style>
