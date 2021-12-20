@@ -17,7 +17,7 @@ export default {
     .glassboard {
         background: white;
         height: 80vh;
-        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255,255,255,0.3));
+        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255,255,255,0.3));
         width: 65vw;
         border-radius: .5rem;
         z-index: 2;

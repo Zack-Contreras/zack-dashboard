@@ -5,8 +5,15 @@
   <div class="dashboard">
     <glass-panel @mark-active="markActive" :navItems="navItems" :active="active"></glass-panel>
     <glass-board>
-      <Resume v-show="active === 0"></Resume>
-      <Projects v-show="active === 1"></Projects>
+      <transition name="fade">
+        <Resume class="transition-page" v-show="active === 0"></Resume>
+      </transition>
+      <transition name="fade">
+        <div class="transition-page" v-show="active === 1">Contact Me</div>
+      </transition>
+      <transition name="fade">
+        <Projects class="transition-page" v-show="active === 2"></Projects>
+      </transition>
     </glass-board>
   </div>
   <!-- <BackgroundElements></BackgroundElements> -->
@@ -26,7 +33,7 @@ export default {
   name: 'App',
   data() {
     return {
-      navItems: ['Resume', 'Projects', 'test'],
+      navItems: ['Resume', 'Yours Truly', 'Projects'],
       active: 1,
     }
   },
@@ -48,7 +55,8 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
 * {
   box-sizing: border-box;
@@ -65,7 +73,7 @@ body {
 }
 #app {
 
-  font-family: 'Outfit', monospace;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -87,5 +95,19 @@ body {
     width: 100%;
     margin-bottom: 3rem;
     padding-top: 12rem;
+}
+
+.fade-enter-to, .fade-leave {
+  transition: all .2s ease-in;
+  opacity: 1;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transition: all .15s ease-out;
+}
+
+.transition-page {
+  position: absolute;
+  width: 100%;
 }
 </style>

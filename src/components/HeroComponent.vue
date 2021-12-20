@@ -11,7 +11,7 @@
     </div>
       <div class="hero-title" :class="{animated: isLoaded}">
           <h1>Zackary Contreras</h1>
-          <h2>Web Developer</h2>
+          <h2>Front-End Engineer | Web Developer</h2>
       </div>
   </div>
 </template>
@@ -33,10 +33,10 @@ export default {
 
 <style>
     .hero {
-        height: 100vh;
+        height: 113vh;
         width: 100%;
          background-image: url('../assets/layered-waves-haikei-bottom.svg');
-         background-repeat: no-repeat;
+         background-repeat: repeat-x;
          background-size: cover;
          display: flex;
          flex-direction: column-reverse;
@@ -44,17 +44,32 @@ export default {
         justify-content: center;
         align-items: center;
         color: white;
+        animation: animatedBackground 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes animatedBackground {
+      from {
+        background-position-x: 0;
+      }
+      to {
+        background-position-x: 100%;
+      }
     }
 
     .hero-title {
-        margin-left: 1rem;
+        width: 100%;
+        margin: 0;
+        padding-left: 2rem;
+        text-align: left;
         transform: translateX(1000%);
-        transition: 1s cubic-bezier(0.19,-0.2, 0.01, 1.43);
+        /*transition: 1s cubic-bezier(0.19,-0.2, 0.01, 1.43);*/
     }
 
     .hero-title > h1 {
-      font-size: 4rem;
+      font-family: 'Comfortaa', cursive;
+      font-size: 6rem;
       margin: 0;
+      opacity: .9;
     }
 
     .hero-title > h2 {
@@ -66,7 +81,10 @@ export default {
     }
 
 .outer-circle {
-  position: relative;
+  display: none;
+  position: absolute;
+    right: 16%;
+    transform: scale(1.5);
   height: 200px;
   width: 200px;
   background: linear-gradient(#0F2027, #3F5C74, #C98723);
@@ -123,10 +141,9 @@ span:nth-child(4) {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1670px) {
   .hero {
-    height: auto;
-    aspect-ratio: 900/600;
+    height: 128vh;
   }
 }
 </style>

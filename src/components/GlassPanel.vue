@@ -24,8 +24,8 @@ export default {
         background: white;
         height: auto;
         display: flex;
-        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255,255,255,0.3));
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255,255,255,0.3));
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 18px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         width: 65vw;
         margin: auto;
         border-radius: .5rem;
@@ -48,5 +48,6 @@ export default {
     p.active {
         background: rgba(255, 255, 255, 0.4);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                font-weight: bold;
     }
 </style>
