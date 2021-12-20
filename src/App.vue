@@ -108,6 +108,5 @@ body {
 
 .transition-page {
   position: absolute;
-  width: 100%;
 }
 </style>
