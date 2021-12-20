@@ -52,11 +52,22 @@ export default {
     .skills {
         display: flex;
         max-width: 30%;
+        min-width: 384px;
         margin: auto;
         justify-content: space-between;
     }
 
     .skill > .fab {
         font-size: 4rem;
+    }
+
+    @media screen and (max-width: 672px) {
+        .skills {
+            max-width: 70%;
+            min-width: 0;
+        }
+        .skill > .fab {
+            font-size: 3rem;
+        }
     }
 </style>

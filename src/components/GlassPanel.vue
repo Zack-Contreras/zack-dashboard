@@ -50,4 +50,10 @@ export default {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 font-weight: bold;
     }
+
+    @media screen and (max-width: 672px) {
+        .glasspanel {
+            width: 85vw;
+        }
+    }
 </style>

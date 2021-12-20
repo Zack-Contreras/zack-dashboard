@@ -24,4 +24,10 @@ export default {
         backdrop-filter: blur(2rem);
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
+
+    @media screen and (max-width: 672px) {
+        .glassboard {
+            width: 85vw;
+        }
+    }
 </style>

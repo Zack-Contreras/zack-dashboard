@@ -46,7 +46,7 @@ export default {
 
 .git-link {
     font-size: 2rem;
-    color: darkcyan;
+    color: black;
 }
 
 .git-icon{
@@ -63,5 +63,15 @@ export default {
     margin-top: 0;
     margin-bottom: 0;
     list-style: none;
+}
+
+@media screen and (max-width: 672px) {
+    .git-link {
+        font-size: 1rem;
+    }
+    .github-projects {
+        width: 100%;
+        padding: 0;
+    }
 }
 </style>

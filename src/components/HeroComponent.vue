@@ -146,4 +146,10 @@ span:nth-child(4) {
     height: 128vh;
   }
 }
+
+@media screen and (max-width: 672px) {
+  .hero-title > h1 {
+      font-size: 3rem;
+    }
+}
 </style>
